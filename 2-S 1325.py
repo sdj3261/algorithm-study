@@ -1,30 +1,36 @@
+from collections import deque
 n,m = map(int,input().split())
-tree = {}
-ret = []
-cnt = {}
-index = {}
-# 초기화
-for i in range(n) :
-    index[i+1] = 0
-# 단방향 간선 만들기
+board = [[] for _ in range(n+1)]
+visited = [False] * (n+1)
 for i in range(m) :
     a,b = map(int,input().split())
-    if a in tree.keys() :
-        tree[a].append(b)
-    else :
-        tree[a] = [b]
+    board[b].append(a)
 
-#각 번호에 대한 해킹 가능 수 카운팅
+def bfs(i) :
+    visited = [0] * (n + 1)
+    visited[i] = True
+    q = deque([i])
+    cnt = 1
+    while q :
+        data = q.popleft()
+        for v in board[data] :
+            if not visited[v] :
+                q.append(v)
+                visited[v] = True
+                cnt+=1
+    return cnt
+max_cnt = 0
+ret = []
 for i in range(1,n+1) :
-    que = []
-    que.append(i)
-    while que :
-        data = que.pop()
-        for key, values in tree.items() :
-            if data in values :
-                que.append(key)
-                index[i] += 1
-                
-max_value = max(index.values())
-ret = [key for key, value in index.items() if value == max_value]
-print(" ".join(map(str, ret)))
+    cnt = bfs(i)
+    if cnt > max_cnt :
+        max_cnt = cnt
+        ret = []
+        ret.append(i)
+    elif cnt == max_cnt :
+        ret.append(i)
+    else :
+        pass
+        
+print(*ret)
+    
