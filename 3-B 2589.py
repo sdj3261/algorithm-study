@@ -37,7 +37,8 @@ for i in range(n) :
             land.append((i,j))
 
 ret = -1000000
-          
+
+#각 land로부터 bfs 최대값 계산
 for l in land :
     ret = max(ret,bfs(l[0],l[1]))
 print(ret)
