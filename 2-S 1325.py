@@ -13,6 +13,7 @@ def bfs(i) :
     cnt = 1
     while q :
         data = q.popleft()
+        #d
         for v in board[data] :
             if not visited[v] :
                 q.append(v)
