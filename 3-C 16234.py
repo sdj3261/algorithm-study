@@ -1,5 +1,5 @@
 from collections import deque
-
+#connected Component 문제
 n,l,r = map(int,input().split())
 a = [[] * n  for _ in range(n)]
 for i in range(n) :
@@ -7,7 +7,7 @@ for i in range(n) :
     for j in range(n) :
         a[i][j] = data[j]
         
-def bfs(i, j):
+def dfs(i, j):
     dq = deque()
     dq.append((i, j))
     visit[i][j] = True
@@ -43,7 +43,7 @@ while True:   # 1. 인구 이동이 없을 때까지 반복
     for i in range(n):
         for j in range(n):
             if not visit[i][j]:
-                if bfs(i, j) > 1:
+                if dfs(i, j) > 1:
                     flag = True
     if not flag:   # 3. 지금까지 인구 이동이 없는 경우, 그만 
         break
