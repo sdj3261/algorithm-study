@@ -59,10 +59,13 @@ while q :
         nx = dx[i] + x
         if not check(ny,nx) :
             continue
+        #이미 방문한적있거나 벽이면 pass
         if person_check[ny][nx] or arr[ny][nx] == "#" :
             continue
+        #불의 최단거리보다 person의 최단거리가 같거나 크면 pass
         if fire_check[ny][nx] <= person_check[y][x] + 1 :
             continue
+    
         person_check[ny][nx] = person_check[y][x] + 1
         q.append((ny,nx))
 if ret != 0 :
