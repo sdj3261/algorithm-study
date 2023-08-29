@@ -11,33 +11,36 @@ chicken = deque()
 home = deque()
 
 for i in range(n) :
-    tmp = input().split()
+    data = input().split()
     for j in range(n) :
-        if int(tmp[j]) == 2 :
-            chicken.append((i,j))
-        elif int(tmp[j]) == 1 :
+        board[i][j] = int(data[j])
+        if board[i][j] == 1 :
             home.append((i,j))
-            
-        board[i][j] = int(tmp[j])
+        elif board[i][j] == 2 :
+            chicken.append((i,j))
 
+# 최대 m개를 골랐을때 도시의 치킨거리 최솟값 구하기
+# import sys
+# maximum = sys.maxint
+# minimum = sys.minint
 
-# 도시의 치킨거리가 가장 최솟값 구하기 완탐 2번 개수 Combination m 하여 모든 경우의 수 구하기
+combi = list(combinations(chicken,m)) # (1,2) (2,2), (4,4) 좌표값
+ret = float("inf")
 
-chicken_combis = list(combinations(chicken,m))
-ret = 1000000
-# 치킨 combi 개수
-for chicken_combi in chicken_combis :
+for c in combi :
     sum = 0
-    # home 뽑아내기
     for h in home :
-        ccd = 1000000
-        # 치킨집 m개에 대해 최솟값
+        minDist = float("inf")
         for k in range(m) :
-            ccd = min(ccd, dist(h[0],h[1],chicken_combi[k][0],chicken_combi[k][1]))
-        sum += ccd
-    ret = min(ret, sum)
-
+            minDist = min(minDist,dist(c[k][0],c[k][1],h[0],h[1]))
+        sum += minDist
+    ret = min(ret,sum)
 print(ret)
+            
+            
+        
+        
+
 
 
 

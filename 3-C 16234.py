@@ -10,7 +10,7 @@ for i in range(n):
     for j in range(n):
         arr[i][j] = data[j]
 
-def bfs(y, x, visited):  # Pass visited as an argument
+def bfs(y, x, visited):  
     q = deque()
     tmp = deque()
     visited[y][x] = 1
@@ -24,7 +24,7 @@ def bfs(y, x, visited):  # Pass visited as an argument
             nx = qx + dx[i]
             if ny < 0 or ny >= n or nx < 0 or nx >= n or visited[ny][nx] == 1:
                 continue
-            if l <= abs(arr[ny][nx] - arr[qy][qx]) <= r:  # Use (qy, qx) instead of (y, x)
+            if l <= abs(arr[ny][nx] - arr[qy][qx]) <= r:
                 q.append((ny, nx))
                 tmp.append((ny, nx))
                 visited[ny][nx] = 1
@@ -35,11 +35,11 @@ ret = 0
 
 while True:
     flag = False
-    visited = [[0] * n for _ in range(n)]  # Initialize visited here
+    visited = [[0] * n for _ in range(n)]  
     for i in range(n):
         for j in range(n):
             if visited[i][j] == 0:
-                count = bfs(i, j, visited)  # Pass visited as an argument
+                count = bfs(i, j, visited)  
                 if len(count) > 1:
                     flag = True
                     number = sum([arr[y][x] for y, x in count]) // len(count)
