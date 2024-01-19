@@ -1,21 +1,24 @@
 from collections import deque
 n = int(input())
 q = deque()
-mx_stu = 0 
-stu_no = 0
+answer = [0,0]
 
 
-for i in range(n) :
-    info = list(map(int,input().split()))
+infos = list(list(map(int,input().split())) for _ in range(n))
+for info in infos :
     if info[0] == 1 :
         q.append(info[1])
+        stu_no = info[1]
+        if answer[0] < len(q) :
+            answer[0] = len(q) 
+            answer[1] = info[1]
+            if info[1] < answer[1] and answer[0] == len(q):
+                answer[1] = info[1]
     elif info[0] == 2 :
         if q :
             q.popleft()
-    if mx_stu <= len(q) :
-        mx_stu = len(q)    
-        stu_no = q[-1]
 
-print(mx_stu, stu_no)
+
+print(answer[0], answer[1])
 
     
