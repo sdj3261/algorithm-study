@@ -15,29 +15,29 @@
 
 | 문제 이름 | 문제 번호 | 링크 | 1회차 | 2회차 | 3회차 |
 |-----------|------------|-----------------------------|--------|--------|--------|
-| 1 - A | 2309 | [🔗](https://www.acmicpc.net/problem/2309) |   |   |   |
-| 1 - B | 10808 | [🔗](https://www.acmicpc.net/problem/10808) |   |   |   |
-| 1 - C | 2979 | [🔗](https://www.acmicpc.net/problem/2979) |   |   |   |
-| 1 - D | 10988 | [🔗](https://www.acmicpc.net/problem/10988) |   |   |   |
-| 1 - E | 1159 | [🔗](https://www.acmicpc.net/problem/1159) |   |   |   |
-| 1 - F | 11655 | [🔗](https://www.acmicpc.net/problem/11655) |   |   |   |
-| 1 - G | 9996 | [🔗](https://www.acmicpc.net/problem/9996) |   |   |   |
-| 1 - H | 2559 | [🔗](https://www.acmicpc.net/problem/2559) |   |   |   |
-| 1 - I | 1620 | [🔗](https://www.acmicpc.net/problem/1620) |   |   |   |
-| 1 - J | 9375 | [🔗](https://www.acmicpc.net/problem/9375) |   |   |   |
-| 1 - K | 1213 | [🔗](https://www.acmicpc.net/problem/1213) |   |   |   |
-| 1 - L | 1940 | [🔗](https://www.acmicpc.net/problem/1940) |   |   |   |
-| 1 - M | 3986 | [🔗](https://www.acmicpc.net/problem/3986) |   |   |   |
-| 1 - N | 1629 | [🔗](https://www.acmicpc.net/problem/1629) |   |   |   |
-| 1 - O | 4375 | [🔗](https://www.acmicpc.net/problem/4375) |   |   |   |
-| 2 - A | 2178 | [🔗](https://www.acmicpc.net/problem/2178) |   |   |   |
-| 2 - B | 1012 | [🔗](https://www.acmicpc.net/problem/1012) |   |   |   |
-| 2 - C | 2468 | [🔗](https://www.acmicpc.net/problem/2468) |   |   |   |
-| 2 - D | 2583 | [🔗](https://www.acmicpc.net/problem/2583) |   |   |   |
-| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) |   |   |   |
-| 2 - F | 2828 | [🔗](https://www.acmicpc.net/problem/2828) |   |   |   |
-| 2 - G | 2910 | [🔗](https://www.acmicpc.net/problem/2910) |   |   |   |
-| 2 - H | 4659 | [🔗](https://www.acmicpc.net/problem/4659) |   |   |   |
+| 1 - A | 2309 | [🔗](https://www.acmicpc.net/problem/2309) |✅|   |   |
+| 1 - B | 10808 | [🔗](https://www.acmicpc.net/problem/10808) | ✅  |   |   |
+| 1 - C | 2979 | [🔗](https://www.acmicpc.net/problem/2979) | ✅  |   |   |
+| 1 - D | 10988 | [🔗](https://www.acmicpc.net/problem/10988) | ✅  |   |   |
+| 1 - E | 1159 | [🔗](https://www.acmicpc.net/problem/1159) |  ✅ |   |   |
+| 1 - F | 11655 | [🔗](https://www.acmicpc.net/problem/11655) | ✅  |   |   |
+| 1 - G | 9996 | [🔗](https://www.acmicpc.net/problem/9996) | ✅  |   |   |
+| 1 - H | 2559 | [🔗](https://www.acmicpc.net/problem/2559) | ✅  |   |   |
+| 1 - I | 1620 | [🔗](https://www.acmicpc.net/problem/1620) | ✅  |   |   |
+| 1 - J | 9375 | [🔗](https://www.acmicpc.net/problem/9375) | ✅  |   |   |
+| 1 - K | 1213 | [🔗](https://www.acmicpc.net/problem/1213) | ✅  |   |   |
+| 1 - L | 1940 | [🔗](https://www.acmicpc.net/problem/1940) | ✅  |   |   |
+| 1 - M | 3986 | [🔗](https://www.acmicpc.net/problem/3986) | ✅  |   |   |
+| 1 - N | 1629 | [🔗](https://www.acmicpc.net/problem/1629) | ✅  |   |   |
+| 1 - O | 4375 | [🔗](https://www.acmicpc.net/problem/4375) | ✅  |   |   |
+| 2 - A | 2178 | [🔗](https://www.acmicpc.net/problem/2178) | ✅  |   |   |
+| 2 - B | 1012 | [🔗](https://www.acmicpc.net/problem/1012) | ✅  |   |   |
+| 2 - C | 2468 | [🔗](https://www.acmicpc.net/problem/2468) | ✅  |   |   |
+| 2 - D | 2583 | [🔗](https://www.acmicpc.net/problem/2583) | ✅  |   |   |
+| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) | ✅  |   |   |
+| 2 - F | 2828 | [🔗](https://www.acmicpc.net/problem/2828) | ✅  |   |   |
+| 2 - G | 2910 | [🔗](https://www.acmicpc.net/problem/2910) | ✅  |   |   |
+| 2 - H | 4659 | [🔗](https://www.acmicpc.net/problem/4659) | ✅  |   |   |
 | 2 - I | 2870 | [🔗](https://www.acmicpc.net/problem/2870) |   |   |   |
 | 2 - J | 10709 | [🔗](https://www.acmicpc.net/problem/10709) |   |   |   |
 | 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) |   |   |   |
