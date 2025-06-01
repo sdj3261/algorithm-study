@@ -34,11 +34,11 @@
 | 2 - B | 1012 | [🔗](https://www.acmicpc.net/problem/1012) | ✅  |   |   |
 | 2 - C | 2468 | [🔗](https://www.acmicpc.net/problem/2468) | ✅  |   |   |
 | 2 - D | 2583 | [🔗](https://www.acmicpc.net/problem/2583) | ✅  |   |   |
-| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) | ✅  |   |   |
+| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) | ❌  | ✅   |   |
 | 2 - F | 2828 | [🔗](https://www.acmicpc.net/problem/2828) | ✅  |   |   |
 | 2 - G | 2910 | [🔗](https://www.acmicpc.net/problem/2910) | ✅  |   |   |
 | 2 - H | 4659 | [🔗](https://www.acmicpc.net/problem/4659) | ✅  |   |   |
-| 2 - I | 2870 | [🔗](https://www.acmicpc.net/problem/2870) |   |   |   |
+| 2 - I | 2870 | [🔗](https://www.acmicpc.net/problem/2870) | ✅  |   |   |
 | 2 - J | 10709 | [🔗](https://www.acmicpc.net/problem/10709) |   |   |   |
 | 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) |   |   |   |
 | 2 - L | 2852 | [🔗](https://www.acmicpc.net/problem/2852) |   |   |   |
