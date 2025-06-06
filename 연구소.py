@@ -28,7 +28,7 @@ def dfs(y,x) :
 
 
 
-# 벽세우기 작업
+# 벽세우기 작업 commit
 for i in range(len(safe_zone) - 2) :
     for j in range(i+1,len(safe_zone)-1) :
         for k in range(j+1,len(safe_zone)) :
