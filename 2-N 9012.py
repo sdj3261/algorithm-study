@@ -1,26 +1,33 @@
+from collections import deque
+q = deque()
 n = int(input())
-for i in range(n):
-    check = True
-    ps = []
-    data = input()
-    for gwalho in data:
-        if gwalho == ')':
-            if len(ps) > 0:
-                ps.pop()
-            else:
-                check = False
-                break
-        else:
-            ps.append(gwalho)
-            
-    if len(ps) == 0 and check:
-        check = True
-    elif check == False :
-        pass
-    else:
-        check = False
+datas = []
 
-    if check:
-        print("YES\n")
-    else:
-        print("NO\n")
+for i in range(n) :
+    datas.append(input())
+
+
+for data in datas :
+    q = deque()
+    #q에 포인터넣기
+    q.append(data[0])
+    ptr = 1
+    while ptr < len(data) :
+        q.append(data[ptr])
+
+        if len(q) > 1 :
+            beforeData = q[-2]
+            # () 모양일때 popleft
+            if data[ptr] == ')' and beforeData == '(' :
+                q.pop()
+                q.pop()
+        ptr += 1
+    #q 초기화
+    if len(q) == 0 :
+        print("YES")
+    else :
+        print("NO")
+
+
+
+
