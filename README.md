@@ -41,8 +41,8 @@
 | 2 - I | 2870 | [🔗](https://www.acmicpc.net/problem/2870) | ✅  |   |   |
 | 2 - J | 10709 | [🔗](https://www.acmicpc.net/problem/10709) |✅ |   |   |
 | 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) | ❌  |   |   |
-| 2 - L | 2852 | [🔗](https://www.acmicpc.net/problem/2852) |   |   |   |
-| 2 - M | 1436 | [🔗](https://www.acmicpc.net/problem/1436) |   |   |   |
+| 2 - L | 2852 | [🔗](https://www.acmicpc.net/problem/2852) | ✅  |   |   |
+| 2 - M | 1436 | [🔗](https://www.acmicpc.net/problem/1436) | ❌  |   |   |
 | 2 - N | 9012 | [🔗](https://www.acmicpc.net/problem/9012) |   |   |   |
 | 2 - O | 4949 | [🔗](https://www.acmicpc.net/problem/4949) |   |   |   |
 | 2 - P | 14502 | [🔗](https://www.acmicpc.net/problem/14502) |   |   |   |
