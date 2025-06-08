@@ -43,10 +43,10 @@
 | 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) | ❌  |   |   |
 | 2 - L | 2852 | [🔗](https://www.acmicpc.net/problem/2852) | ✅  |   |   |
 | 2 - M | 1436 | [🔗](https://www.acmicpc.net/problem/1436) | ❌  |   |   |
-| 2 - N | 9012 | [🔗](https://www.acmicpc.net/problem/9012) |   |   |   |
-| 2 - O | 4949 | [🔗](https://www.acmicpc.net/problem/4949) |   |   |   |
-| 2 - P | 14502 | [🔗](https://www.acmicpc.net/problem/14502) |   |   |   |
-| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) |   |   |   |
+| 2 - N | 9012 | [🔗](https://www.acmicpc.net/problem/9012) | ✅  |   |   |
+| 2 - O | 4949 | [🔗](https://www.acmicpc.net/problem/4949) | ✅  |   |   |
+| 2 - P | 14502 | [🔗](https://www.acmicpc.net/problem/14502) | ✅  |   |   |
+| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) | ❌  |   |   |
 | 2 - R | 1068 | [🔗](https://www.acmicpc.net/problem/1068) |   |   |   |
 | 2 - S | 1325 | [🔗](https://www.acmicpc.net/problem/1325) |   |   |   |
 | 2 - T | 17298 | [🔗](https://www.acmicpc.net/problem/17298) |   |   |   |
