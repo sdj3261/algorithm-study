@@ -19,9 +19,16 @@ def dfs(node) :
     if not tree[node] :
         ret += 1
         return
+
+    # 삭제되지않은 노드가 하나도 없으면 리프노드
+    is_leaf = True
     for child in tree[node] :
         if child != delete_node :
             dfs(child)
+            is_leaf = False
+    if is_leaf :
+        ret += 1
+        return
 
 if delete_node == root:
     print(0)
