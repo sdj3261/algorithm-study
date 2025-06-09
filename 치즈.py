@@ -1,57 +1,56 @@
 from collections import deque
-
 n, m = map(int, input().split())
-board = [list(map(int, input().split())) for _ in range(n)]
+board = [[0] * m for _ in range(n)]
+dy = [0,1,0,-1]
+dx = [1,0,-1,0]
+visited = [[False] * m for _ in range(n)]
 
-dy = [-1, 1, 0, 0]
-dx = [0, 0, -1, 1]
+cheese_count = 0
 
-def bfs():
+for i in range(n) :
+    data = list(map(int,input().split()))
+    for j in range(m) :
+        board[i][j] = data[j]
+
+
+def bfs() :
     visited = [[False] * m for _ in range(n)]
-    queue = deque()
-    queue.append((0, 0))
+    melt = []
+    q = deque()
+    q.append((0,0))
     visited[0][0] = True
+    while q :
+        y,x = q.popleft()
 
-    melt_list = []
-
-    while queue:
-        print(queue)
-        y, x = queue.popleft()
-        for dir in range(4):
-            ny = y + dy[dir]
-            nx = x + dx[dir]
-            if 0 <= ny < n and 0 <= nx < m and not visited[ny][nx]:
-                visited[ny][nx] = True
-                if board[ny][nx] == 0:
-                    queue.append((ny, nx))
-                elif board[ny][nx] == 1:
-                    # 외부 공기와 접촉한 치즈 → 녹일 대상으로 추가
-                    melt_list.append((ny, nx))
-
-    return melt_list
+        for i in range(4) :
+            ny = y + dy[i]
+            nx = x + dx[i]
+            if 0 <= ny < n and 0 <= nx < m :
+                if visited[ny][nx]  :
+                    continue
+                if board[ny][nx] == 0 :
+                    q.append((ny,nx))
+                    visited[ny][nx] = True
+                    #이 0자리로는 이제 탐색안합니다.
+                if board[ny][nx] == 1 :
+                    melt.append((ny,nx))
+                    visited[ny][nx] = True
+                    #이 치즈로는 이제 탐색 안합니다.
+    return melt
 
 time = 0
-last_cheese = 0
+latest_cheese = 0
 
-while True:
-    melt_target = bfs()
-    # 디버깅용 출력: 녹을 위치는 1, 나머지는 0
-    print("MELT!!!!!!")
-    for i in range(n):
-        for j in range(m):
-            if (i, j) in melt_target:
-                print(1, end=' ')
-            else:
-                print(0, end=' ')
-        print()  # 줄 바꿈
-    if not melt_target:
+while True :
+    melt_idx = bfs()
+    if len(melt_idx) == 0:
         break
-
-    last_cheese = len(melt_target)
-    for y, x in melt_target:
-        board[y][x] = 0  # 치즈 녹이기
-
+    #melt 존재시 녹이기 수행
+    for melt in melt_idx :
+        melt_y,melt_x = melt
+        board[melt_y][melt_x] = 0
+    latest_cheese = len(melt_idx)
     time += 1
 
 print(time)
-print(last_cheese)
+print(latest_cheese)
