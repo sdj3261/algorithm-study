@@ -39,7 +39,7 @@ def bfs() :
     return melt
 
 time = 0
-latest_cheese = 0
+latest_cheese = 0 #
 
 while True :
     melt_idx = bfs()
