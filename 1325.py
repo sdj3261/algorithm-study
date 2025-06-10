@@ -6,3 +6,4 @@ dx = [1,0,-1,0]
 visited = [[False] * m for _ in range(n)]
 
 
+:quit()
