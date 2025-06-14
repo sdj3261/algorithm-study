@@ -34,23 +34,23 @@
 | 2 - B | 1012 | [🔗](https://www.acmicpc.net/problem/1012) | ✅  |   |   |
 | 2 - C | 2468 | [🔗](https://www.acmicpc.net/problem/2468) | ✅  |   |   |
 | 2 - D | 2583 | [🔗](https://www.acmicpc.net/problem/2583) | ✅  |   |   |
-| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) | ❌  | ✅   |   |
+| 2 - E | 1992 | [🔗](https://www.acmicpc.net/problem/1992) | ❌  | ✅   | ⏳   |
 | 2 - F | 2828 | [🔗](https://www.acmicpc.net/problem/2828) | ✅  |   |   |
 | 2 - G | 2910 | [🔗](https://www.acmicpc.net/problem/2910) | ✅  |   |   |
 | 2 - H | 4659 | [🔗](https://www.acmicpc.net/problem/4659) | ✅  |   |   |
 | 2 - I | 2870 | [🔗](https://www.acmicpc.net/problem/2870) | ✅  |   |   |
 | 2 - J | 10709 | [🔗](https://www.acmicpc.net/problem/10709) |✅ |   |   |
-| 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) | ❌  |   |   |
+| 2 - K | 3474 | [🔗](https://www.acmicpc.net/problem/3474) | ❌  | ❌ | ✅  |
 | 2 - L | 2852 | [🔗](https://www.acmicpc.net/problem/2852) | ✅  |   |   |
-| 2 - M | 1436 | [🔗](https://www.acmicpc.net/problem/1436) | ❌  |   |   |
+| 2 - M | 1436 | [🔗](https://www.acmicpc.net/problem/1436) | ❌  | ✅   |   |
 | 2 - N | 9012 | [🔗](https://www.acmicpc.net/problem/9012) | ✅  |   |   |
 | 2 - O | 4949 | [🔗](https://www.acmicpc.net/problem/4949) | ✅  |   |   |
 | 2 - P | 14502 | [🔗](https://www.acmicpc.net/problem/14502) | ✅  |   |   |
-| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) | ❌  |   |   |
-| 2 - R | 1068 | [🔗](https://www.acmicpc.net/problem/1068) |  ❌ |   |   |
+| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) | ❌  | ❌  | ⏳  |
+| 2 - R | 1068 | [🔗](https://www.acmicpc.net/problem/1068) |  ❌ | ❌  |  ⏳ |
 | 2 - S | 1325 | [🔗](https://www.acmicpc.net/problem/1325) | ✅  |   |   |
 | 2 - T | 17298 | [🔗](https://www.acmicpc.net/problem/17298) | ✅  |   |   |
-| 3 - A | 15686 | [🔗](https://www.acmicpc.net/problem/15686) |   |   |   |
+| 3 - A | 15686 | [🔗](https://www.acmicpc.net/problem/15686) | ✅  |   |   |
 | 3 - B | 2589 | [🔗](https://www.acmicpc.net/problem/2589) |   |   |   |
 
 
