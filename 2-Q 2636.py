@@ -1,58 +1,63 @@
-import sys
+from collections import deque
+n,m = map(int,input().split())
+arr = [[0] * m for _ in range(n)]
+q = deque()
+dy = [-1,0,1,0]
+dx = [0,1,0,-1]
 
-visited = [[False] * 104 for _ in range(104)]
-arr = [[0] * 104 for _ in range(104)]
-dy = [-1, 0, 1, 0]
-dx = [0, 1, 0, -1]
-edge = []
-m, n = map(int, input().split())
-sys.setrecursionlimit(10**6)
+for i in range(n) :
+    data = list(map(int,input().split()))
+    for j in range(m) :
+        arr[i][j] = data[j]
 
-finalCheeseCount = 0  # finalCheeseCount를 전역 변수로 선언
-
-
-def dfs(board, y, x):
-    global finalCheeseCount  # finalCheeseCount를 전역 변수로 사용
-    visited[y][x] = True
-    if board[y][x] == 1:
-        edge.append((y, x))
-        finalCheeseCount += 1
-        return
-
-    for i in range(4):
-        ny = dy[i] + y
-        nx = dx[i] + x
-
-        if ny < 0 or ny >= m or nx < 0 or nx >= n or visited[ny][nx]:
-            continue
-        dfs(board, ny, nx)
-
-
-def checkCheese():
-    for i in range(m):
-        for j in range(n):
-            if arr[i][j] == 1:
-                return True
-    return False
-
-
-for i in range(m):
-    data = input().split()
-    for j in range(n):
-        arr[i][j] = int(data[j])
-
-dfs(arr, 0, 0)
 ret1 = 0
 ret2 = 0
-while checkCheese():
-    if len(edge) > 0:
-        finalCheeseCount = len(edge)
-    while edge:
-        egY, egX = edge.pop()
-        arr[egY][egX] = 0
-    ret1 += 1
-    visited = [[False] * 104 for _ in range(104)]
-    dfs(arr, 0, 0)
+cnt = 0
 
-print(ret1, end="\n")
-print(finalCheeseCount, end="\n")
+def bfs(y,x) :
+    visited = [[False] * m for _ in range(n)]
+    visited[y][x] = True
+    q.append((y,x))
+    melt_cheese = []
+
+    while q :
+        y,x = q.popleft()
+        for i in range(4) :
+            ny = y + dy[i]
+            nx = x + dx[i]
+            if ny < 0 or ny >= n or nx < 0 or nx >= m :
+                continue
+            if visited[ny][nx] :
+                continue
+            if arr[ny][nx] == 0 :
+                q.append((ny,nx))
+                visited[ny][nx] = True
+            if arr[ny][nx] == 1 :
+                melt_cheese.append((ny,nx))
+                visited[ny][nx] = True
+
+    #겉면 녹이기
+    for cheese in melt_cheese :
+        y,x = cheese
+        arr[y][x] = 0
+
+    return len(melt_cheese)
+
+while True :
+    melt_count = bfs(0,0)
+
+    if melt_count == 0 :
+        break
+    else :
+        ret2 = melt_count
+    cnt += 1
+print(cnt)
+print(ret2)
+
+
+
+
+
+
+
+
