@@ -46,12 +46,12 @@
 | 2 - N | 9012 | [🔗](https://www.acmicpc.net/problem/9012) | ✅  |   |   |
 | 2 - O | 4949 | [🔗](https://www.acmicpc.net/problem/4949) | ✅  |   |   |
 | 2 - P | 14502 | [🔗](https://www.acmicpc.net/problem/14502) | ✅  |   |   |
-| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) | ❌  | ❌  | ⏳  |
-| 2 - R | 1068 | [🔗](https://www.acmicpc.net/problem/1068) |  ❌ | ❌  |  ⏳ |
+| 2 - Q | 2636 | [🔗](https://www.acmicpc.net/problem/2636) | ❌  | ✅  | ⏳  |
+| 2 - R | 1068 | [🔗](https://www.acmicpc.net/problem/1068) |  ❌ |✅  |  ⏳ |
 | 2 - S | 1325 | [🔗](https://www.acmicpc.net/problem/1325) | ✅  |   |   |
 | 2 - T | 17298 | [🔗](https://www.acmicpc.net/problem/17298) | ✅  |   |   |
 | 3 - A | 15686 | [🔗](https://www.acmicpc.net/problem/15686) | ✅  |   |   |
-| 3 - B | 2589 | [🔗](https://www.acmicpc.net/problem/2589) |   |   |   |
+| 3 - B | 2589 | [🔗](https://www.acmicpc.net/problem/2589) |  ✅ |   |   |
 
 
 📌 표는 추후 문제 추가 시 계속 업데이트합니다.
