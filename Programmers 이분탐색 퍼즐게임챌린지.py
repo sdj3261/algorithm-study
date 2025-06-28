@@ -5,7 +5,7 @@ def solution(diffs, times, limit):
     right = max(diffs)
     arr = []
 
-    while left <= right:
+    while left <= right: # 이분탐색
         level = (right + left) // 2
         sub_ret = 0
         for i in range(n):
