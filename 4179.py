@@ -1,63 +1,75 @@
 from collections import deque
+r,c = map(int,input().split())
+arr = [['0'] * c for i in range(r)]
+j_arr = [[-1] * c for i in range(r)]
+f_arr = [[-1] * c for i in range(r)]
+for i in range(r):
+    arr[i] = input()
+j_y = 0
+j_x = 0
+dy = [-1,0,1,0]
+dx = [0,1,0,-1]
+fire_set = set()
+for i in range(r) :
+    for j in range(c) :
+        if arr[i][j] == 'J' :
+            j_y = i
+            j_x = j
+            j_arr[i][j] = 0
+        if arr[i][j] == 'F' :
+            fire_set.add((i,j))
+            f_arr[i][j] = 0
 
-INF = float('inf')   # 진짜 무한대 표현
-n, m = map(int, input().split())
-
-a = []
-for _ in range(n):
-    a.append(list(input().strip()))
-
-fire_check = [[INF] * m for _ in range(n)]
-person_check = [[0] * m for _ in range(n)]
-
-dy = [-1, 0, 1, 0]
-dx = [0, 1, 0, -1]
-
+#지훈이의 최단거리 배열 생성
 q = deque()
+q.append((j_y,j_x))
+while q :
+    y,x = q.popleft()
+    for i in range(4) :
+        ny = dy[i] + y
+        nx = dx[i] + x
+        if ny < 0 or ny >= r or nx < 0 or nx >= c :
+            continue
+        if arr[ny][nx] == '.' and j_arr[ny][nx] == -1:
+            q.append((ny,nx))
+            j_arr[ny][nx] = j_arr[y][x] + 1
 
-# fire 시작 좌표들 먼저 넣고 초기화
-for i in range(n):
-    for j in range(m):
-        if a[i][j] == 'F':
-            fire_check[i][j] = 1
-            q.append((i, j))
-        elif a[i][j] == 'J':
-            sy, sx = i, j
-
-# BFS: 불 먼저 확산
-while q:
-    y, x = q.popleft()
-    for i in range(4):
-        ny = y + dy[i]
-        nx = x + dx[i]
-        if 0 <= ny < n and 0 <= nx < m:
-            if fire_check[ny][nx] == INF and a[ny][nx] != '#':
-                fire_check[ny][nx] = fire_check[y][x] + 1
-                q.append((ny, nx))
-
-# BFS: 사람 이동
+#fire 배열 최단거리 측정
 q = deque()
-person_check[sy][sx] = 1
-q.append((sy, sx))
-ret = 0
+for y,x in fire_set :
+    q.append((y,x))
+while q :
+    y,x = q.popleft()
+    for i in range(4) :
+        ny = dy[i] + y
+        nx = dx[i] + x
+        if ny < 0 or ny >= r or nx < 0 or nx >= c :
+            continue
+        if arr[ny][nx] == '.' and f_arr[ny][nx] == -1 :
+            q.append((ny,nx))
+            f_arr[ny][nx] = f_arr[y][x] + 1
 
-while q:
-    y, x = q.popleft()
-    # 테두리 탈출
-    if y == 0 or y == n - 1 or x == 0 or x == m - 1:
-        ret = person_check[y][x]
-        break
-    for i in range(4):
-        ny = y + dy[i]
-        nx = x + dx[i]
-        if 0 <= ny < n and 0 <= nx < m:
-            if person_check[ny][nx] == 0 and a[ny][nx] != '#':
-                # 불보다 먼저 도착할 수 있어야 한다
-                if fire_check[ny][nx] > person_check[y][x] + 1:
-                    person_check[ny][nx] = person_check[y][x] + 1
-                    q.append((ny, nx))
+j_min_data = float('inf')
+for i in range(r):
+    for j in range(c):
+        if i == r-1 or j == c-1 or i == 0 or j == 0:
+            if arr[i][j] == '#':
+                continue
+            if j_arr[i][j] == -1:
+                continue
+            # 불이 안 오는 칸이면 무조건 탈출 가능
+            if f_arr[i][j] == -1:
+                j_min_data = min(j_min_data, j_arr[i][j])
+            elif f_arr[i][j] > j_arr[i][j]:
+                j_min_data = min(j_min_data, j_arr[i][j])
 
-if ret != 0:
-    print(ret)
-else:
+if j_min_data == float('inf') :
     print("IMPOSSIBLE")
+else :
+    print(j_min_data + 1)
+
+
+
+
+
+
