@@ -24,7 +24,7 @@ def countAttack(path):
 
         count += 1
     return count
-#dd
+#ddd
 # def permu() :
 #     if len(path) == len(arr) :
 #         print(*path)
