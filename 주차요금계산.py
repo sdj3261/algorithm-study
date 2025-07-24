@@ -38,7 +38,7 @@ def solution(fees, records):
         mod = (v - defaultTime) % unitTime
         checkTime = (v - defaultTime) // unitTime
         if v <= defaultTime :
-            ret[k] = defaultFee
+            ret[k] = defaultFee #defaultFee
         else :
             ret[k] = defaultFee + checkTime * unitFee
             #만약 mod 존재시 유닛fee 추가계산
