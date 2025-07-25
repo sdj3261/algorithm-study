@@ -21,7 +21,7 @@ def solution(queue1, queue2):
     max_cnt = (len(q1) + len(q2)) * 2
 
     i,j = 0,0
-
+    #queue 간 합 계산
     while cnt <= max_cnt :
         if s1 == mid :
             print(s1, s2, mid)
