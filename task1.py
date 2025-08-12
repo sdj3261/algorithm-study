@@ -25,4 +25,4 @@ def max_two_two_digit_sum_verbose(s):
         ans = max(ans, left + right)
 
     return ans
-print(max_two_two_digit_sum_verbose('9999999999999999999999999999999999999999999999999999999999999999999999999999999999'))
+print(max_two_two_digit_sum_verbose('32481'))
