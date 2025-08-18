@@ -1,5 +1,8 @@
 cnt = [0] * 26
 data = input()
-for c in data :
-    cnt[ord(c) - ord('a')] += 1
-print(*cnt)
+
+for i in data :
+    cnt[ord(i)-ord('a')] += 1
+
+for i in range(26) :
+    print(cnt[i], end=' ')
