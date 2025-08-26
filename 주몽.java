@@ -3,6 +3,7 @@ package Kundol;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class K1N {
@@ -22,8 +23,24 @@ public class K1N {
     StringTokenizer st = new StringTokenizer(br.readLine());
     int[] num = new int[n];
     for (int i = 0; i < n; i++) num[i] = Integer.parseInt(st.nextToken());
+    Arrays.sort(num);
 
-    combi(0, 0, 0, num); // start=0, depth=0, sum=0
+    int left = 0;
+    int right  = num.length-1;
+
+    while(left < right) {
+      int sum = num[left] + num[right];
+      if(sum == m) {
+        ret += 1;
+        left+=1;
+        right-=1;
+      }else if (sum < m) {
+        left += 1;
+      } else {
+        right -= 1;
+      }
+    }
+//    combi(0, 0, 0, num); // start=0, depth=0, sum=0
     System.out.println(ret);
   }
 
