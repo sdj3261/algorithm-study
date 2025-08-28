@@ -6,9 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+//주몽d
 public class K1N {
   static int ret;
   static int n, m;
+  static int k;
 
   // 선택한 2개를 담을 원시 배열(박싱 제거)
   static int[] pick = new int[2];

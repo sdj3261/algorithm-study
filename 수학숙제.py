@@ -3,6 +3,7 @@ n = int(input())
 # 앞에 0이면 삭제 필요
 arr = []
 datas = []
+#dd
 def compactNumber(data) :
     ret = data
     while True :
