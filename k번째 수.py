@@ -14,4 +14,5 @@ for j in ml :
         answer.append(d[j])
     else :
         answer.append(0)
+
 print(*answer)
