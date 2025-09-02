@@ -11,6 +11,7 @@ def solution(schedules, timelogs, startday):
         cutoff = to_min(pref) + 10  # 희망 시각 + 10분
 
         ok = True
+        #test
         for d in range(7):
             if is_weekday[d] and to_min(timelogs[i][d]) > cutoff:
                 ok = False
